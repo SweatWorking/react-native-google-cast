@@ -54,6 +54,7 @@ RCT_EXPORT_METHOD(stopScan)
   RCTLogInfo(@"stop chromecast!");
   dispatch_async(dispatch_get_main_queue(), ^{
     [_deviceScanner removeListener:self];
+    [_deviceScanner stopScan];
   });
 }
 
