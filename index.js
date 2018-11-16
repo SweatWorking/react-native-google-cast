@@ -30,6 +30,9 @@ export default {
   togglePauseCast: function () {
 	GoogleCast.togglePauseCast();
   },
+  setPauseCast: function(pause: boolean) {
+    GoogleCast.setPauseCast(pause)
+  },
   getStreamPosition: function () {
 	return GoogleCast.getStreamPosition();
   },
