@@ -172,6 +172,19 @@ public class GoogleCastModule extends ReactContextBaseJavaModule implements Life
     }
 
     @ReactMethod
+    public void setPauseCast(boolean shouldPause) {
+        try {
+            if (shouldPause) {
+                mCastManager.pause();
+            } else {
+                mCastManager.play();
+            }
+        } catch (CastException | TransientNetworkDisconnectionException | NoConnectionException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @ReactMethod
     public void seekCast(int seconds) {
         try {
             //mCastManager receives milliseconds
