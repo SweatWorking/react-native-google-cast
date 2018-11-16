@@ -127,7 +127,7 @@ RCT_EXPORT_METHOD(togglePauseCast)
 
 RCT_EXPORT_METHOD(setPauseCast:(BOOL) pause)
 {
-  pause ? [self.mediaControlChannel play] : [self.mediaControlChannel pause];
+  pause ? [self.mediaControlChannel pause] : [self.mediaControlChannel play];
 }
 
 RCT_EXPORT_METHOD(seekCast:(double) seconds){
